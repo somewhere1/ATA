@@ -1,0 +1,26 @@
+{
+  "name": "ata",
+  "version": "1.0.0",
+  "description": "> 一份为「背景普通、有开源经验」的研究者准备的 Anthropic 进入路线图与学习资源库。",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somewhere1/ATA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somewhere1/ATA/issues"
+  },
+  "homepage": "https://github.com/somewhere1/ATA#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.30"
+  }
+}

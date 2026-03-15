@@ -1,0 +1,551 @@
+/* ============================================
+   Aim to Anthropic — Warm Learning Platform
+   Aesthetic: Motivational + Clean + Warm
+   ============================================ */
+
+:root {
+  /* Warm coral + deep navy palette */
+  --ata-coral: #E07A5F;
+  --ata-coral-light: #F2A78D;
+  --ata-coral-glow: #E07A5F33;
+  --ata-navy: #3D405B;
+  --ata-navy-deep: #2C2E43;
+  --ata-sage: #81B29A;
+  --ata-sage-light: #A8D5BA;
+  --ata-cream: #FFF8F0;
+  --ata-sand: #F4F1DE;
+  --ata-gold: #F2CC8F;
+  --ata-gold-bright: #EDBE5A;
+
+  /* VitePress theme overrides */
+  --vp-c-brand-1: var(--ata-coral);
+  --vp-c-brand-2: #D4694F;
+  --vp-c-brand-3: var(--ata-coral);
+  --vp-c-brand-soft: var(--ata-coral-glow);
+
+  --vp-font-family-base: 'Source Sans 3', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'SF Mono', monospace;
+
+  --vp-c-bg: var(--ata-cream);
+  --vp-c-bg-alt: var(--ata-sand);
+  --vp-c-bg-soft: #F9F5EB;
+  --vp-sidebar-bg-color: var(--ata-cream);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, var(--ata-coral) 0%, var(--ata-navy) 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, var(--ata-coral-glow) 0%, transparent 70%);
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+.dark {
+  --vp-c-bg: #1A1B2E;
+  --vp-c-bg-alt: #22243A;
+  --vp-c-bg-soft: #2A2C45;
+  --vp-sidebar-bg-color: #1A1B2E;
+  --ata-cream: #1A1B2E;
+  --ata-sand: #22243A;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', 'Noto Sans SC', Georgia, serif !important;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc h1 {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--ata-navy) 0%, var(--ata-coral) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .vp-doc h1 {
+  background: linear-gradient(135deg, var(--ata-coral-light) 0%, var(--ata-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.vp-doc h2 {
+  border-top: 2px solid var(--ata-coral-glow);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* ---- Links ---- */
+.vp-doc a {
+  color: var(--ata-coral);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ata-coral-glow);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--ata-coral);
+}
+
+/* ---- Tables ---- */
+.vp-doc table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: var(--ata-coral-glow);
+}
+
+.dark .vp-doc tr:nth-child(2n) {
+  background: rgba(224, 122, 95, 0.08);
+}
+
+.vp-doc th {
+  background: var(--ata-navy) !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Code blocks ---- */
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  border: 1px solid var(--ata-coral-glow);
+}
+
+/* ---- Sidebar ---- */
+.VPSidebar {
+  border-right: 1px solid var(--ata-coral-glow) !important;
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--ata-coral) !important;
+  font-weight: 600;
+}
+
+/* ---- Custom components ---- */
+
+/* Quiz Component */
+.quiz-container {
+  background: var(--ata-sand);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--ata-coral);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.dark .quiz-container {
+  background: var(--vp-c-bg-alt);
+}
+
+.quiz-container h4 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  color: var(--ata-navy);
+}
+
+.dark .quiz-container h4 {
+  color: var(--ata-coral-light);
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+.dark .quiz-option {
+  background: var(--vp-c-bg-soft);
+}
+
+.quiz-option:hover {
+  border-color: var(--ata-coral-glow);
+  transform: translateX(4px);
+}
+
+.quiz-option.selected {
+  border-color: var(--ata-coral);
+  background: var(--ata-coral-glow);
+}
+
+.quiz-option.correct {
+  border-color: var(--ata-sage);
+  background: rgba(129, 178, 154, 0.15);
+}
+
+.quiz-option.incorrect {
+  border-color: #E07A5F;
+  background: rgba(224, 122, 95, 0.1);
+  opacity: 0.6;
+}
+
+.quiz-explanation {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(129, 178, 154, 0.1);
+  border-radius: 10px;
+  border-left: 3px solid var(--ata-sage);
+  font-size: 0.9rem;
+  animation: fadeSlideIn 0.3s ease;
+}
+
+/* Checklist Component */
+.checklist-container {
+  background: var(--ata-sand);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.dark .checklist-container {
+  background: var(--vp-c-bg-alt);
+}
+
+.checklist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checklist-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.checklist-progress {
+  height: 8px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.dark .checklist-progress {
+  background: rgba(255,255,255,0.08);
+}
+
+.checklist-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ata-coral) 0%, var(--ata-gold-bright) 100%);
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dark .checklist-item {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.checklist-item.done {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.checklist-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--ata-coral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.25s ease;
+  background: white;
+}
+
+.dark .checklist-checkbox {
+  background: var(--vp-c-bg-soft);
+}
+
+.checklist-checkbox.checked {
+  background: var(--ata-coral);
+  border-color: var(--ata-coral);
+}
+
+.checklist-checkbox.checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.checklist-count {
+  font-size: 0.85rem;
+  color: var(--ata-coral);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Writing Exercise Component */
+.writing-exercise {
+  background: var(--ata-sand);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--ata-gold-bright);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.dark .writing-exercise {
+  background: var(--vp-c-bg-alt);
+}
+
+.writing-exercise h4 {
+  margin: 0 0 0.5rem;
+  color: var(--ata-navy);
+}
+
+.dark .writing-exercise h4 {
+  color: var(--ata-gold);
+}
+
+.writing-prompt {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.dark .writing-prompt {
+  color: #aaa;
+}
+
+.writing-textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: var(--vp-font-family-base);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: vertical;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.dark .writing-textarea {
+  background: var(--vp-c-bg-soft);
+  border-color: rgba(255,255,255,0.1);
+  color: #ddd;
+}
+
+.writing-textarea:focus {
+  outline: none;
+  border-color: var(--ata-gold-bright);
+}
+
+.writing-example {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(242, 204, 143, 0.15);
+  border-radius: 10px;
+  border-left: 3px solid var(--ata-gold-bright);
+  font-size: 0.9rem;
+  animation: fadeSlideIn 0.3s ease;
+}
+
+.writing-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ata-gold-bright);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ata-navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .writing-toggle {
+  color: var(--ata-gold);
+}
+
+.writing-toggle:hover {
+  background: var(--ata-gold-bright);
+  color: white;
+}
+
+/* Colab Link Card */
+.colab-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--ata-sand);
+  border-radius: 12px;
+  border: 2px solid var(--ata-coral-glow);
+  margin: 1rem 0;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.dark .colab-card {
+  background: var(--vp-c-bg-alt);
+}
+
+.colab-card:hover {
+  border-color: var(--ata-coral);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(224, 122, 95, 0.15);
+}
+
+.colab-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.colab-info h5 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  color: var(--ata-navy);
+}
+
+.dark .colab-info h5 {
+  color: var(--ata-coral-light);
+}
+
+.colab-info p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* Progress Badge */
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.phase-badge.not-started {
+  background: rgba(0,0,0,0.06);
+  color: #888;
+}
+
+.phase-badge.in-progress {
+  background: rgba(224, 122, 95, 0.15);
+  color: var(--ata-coral);
+}
+
+.phase-badge.completed {
+  background: rgba(129, 178, 154, 0.2);
+  color: var(--ata-sage);
+}
+
+/* ---- Animations ---- */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-60px) rotate(720deg); opacity: 0; }
+}
+
+.confetti-burst {
+  position: relative;
+}
+
+.confetti-burst::after {
+  content: '🎉';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  animation: confetti 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+/* ---- Homepage hero ---- */
+.VPHero .name {
+  font-family: 'DM Serif Display', serif !important;
+}
+
+.VPHero .tagline {
+  font-family: 'Source Sans 3', 'Noto Sans SC', sans-serif !important;
+  max-width: 520px;
+}
+
+/* Feature cards */
+.VPFeature {
+  border-radius: 16px !important;
+  border: 1px solid var(--ata-coral-glow) !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPFeature:hover {
+  border-color: var(--ata-coral) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(224, 122, 95, 0.12) !important;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    font-size: 1.7rem;
+  }
+  .quiz-container, .checklist-container, .writing-exercise {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ata-coral-glow);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ata-coral);
+}
