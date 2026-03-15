@@ -12,6 +12,7 @@ const zhNav = [
       { text: '社区指南', link: '/resources/community-guide' },
       { text: '写作模板', link: '/resources/writing-templates' },
       { text: '备选路线', link: '/resources/alternative-paths' },
+      { text: '项目与机会', link: '/resources/programs' },
     ]
   },
   {
@@ -84,6 +85,7 @@ const zhSidebar = {
         { text: '社区与人脉指南', link: '/resources/community-guide' },
         { text: '学术写作资源', link: '/resources/writing-templates' },
         { text: '备选路线', link: '/resources/alternative-paths' },
+        { text: '项目与机会', link: '/resources/programs' },
       ]
     }
   ]
