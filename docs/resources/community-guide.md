@@ -48,8 +48,9 @@
 | 社区 | 说明 | 链接 |
 |------|------|------|
 | EleutherAI | 开源 LLM 研究最活跃 | [Discord](https://discord.gg/zBGx3azzUn) |
+| ARENA Discord | ARENA 课程配套讨论，注册后获得邀请 | [arena.education](https://www.arena.education/) |
 | AI Safety Support | 新人友好 | 搜索即可 |
-| Apart Research | Hackathon 配套 | [apartresearch.com](https://www.apartresearch.com/) |
+| Apart Research | Hackathon 配套，找合作者 | [apartresearch.com](https://www.apartresearch.com/) |
 
 ---
 
