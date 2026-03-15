@@ -94,6 +94,30 @@ Anthropic 研究者背书，业内最好的免费技术安全课程。
   explanation="Induction Heads 是 Transformer 中实现 in-context learning 的关键 circuit。它们通过 'prefix matching' + 'copying' 机制，识别之前出现过的序列模式并预测下一个 token。这是 Olsson et al. (2022) 的重要发现。"
 />
 
+<Quiz
+  question="Sparse Autoencoders (SAE) 解决的核心问题是什么？"
+  :options="[
+    '加速模型训练',
+    '解决 superposition：将多义神经元分解为单义特征',
+    '减少模型参数数量',
+    '提高模型准确率'
+  ]"
+  :answer="1"
+  explanation="神经网络中存在 superposition 现象：单个神经元可能同时编码多个不同概念。SAE 通过学习一个稀疏的过完备字典，将激活分解为单义的 features，使每个 feature 对应一个可理解的概念。"
+/>
+
+<Quiz
+  question="Activation Patching 的实验思路是什么？"
+  :options="[
+    '随机修改模型权重，观察输出变化',
+    '将模型 A 的某层激活替换到模型 B 中',
+    '在特定位置用干净输入的激活替换损坏输入的激活，观察模型行为恢复程度',
+    '逐步删除注意力头，测试模型退化速度'
+  ]"
+  :answer="2"
+  explanation="Activation Patching 是 Mech Interp 的核心因果推断工具：先用损坏的输入运行模型，然后在特定位置用干净输入的激活值替换，观察模型行为恢复了多少。恢复越多，说明该位置对该功能越关键。"
+/>
+
 <Checklist
   id="phase2-safety"
   title="AI Safety 入门完成清单"

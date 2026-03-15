@@ -80,6 +80,18 @@ pip install circuitsvis         # 可视化
 | [ConnectedPapers](https://www.connectedpapers.com/) | 按需 | 找论文的相关研究图谱 |
 
 <Quiz
+  question="DPO 相比传统 RLHF 的主要优势是什么？"
+  :options="[
+    '需要更多的人类标注数据',
+    '不需要训练一个独立的 reward model，直接从偏好数据优化策略',
+    '只能用于小模型',
+    '训练结果更不稳定'
+  ]"
+  :answer="1"
+  explanation="DPO（Direct Preference Optimization）跳过了训练 reward model 的步骤，直接用偏好数据对策略进行优化。这简化了训练流程，减少了超参数调节，且在很多场景下效果与 RLHF 相当甚至更好。"
+/>
+
+<Quiz
   question="以下哪个是 Anthropic 的核心对齐方法？"
   :options="[
     'RLHF（纯人类反馈）',

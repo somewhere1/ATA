@@ -7,6 +7,9 @@ import WritingExercise from './components/WritingExercise.vue'
 import ColabLink from './components/ColabLink.vue'
 import ProgressBar from './components/ProgressBar.vue'
 import RoadmapHero from './components/RoadmapHero.vue'
+import ConferenceTimeline from './components/ConferenceTimeline.vue'
+import ProgressDashboard from './components/ProgressDashboard.vue'
+import GiscusComments from './components/GiscusComments.vue'
 
 export default {
   extends: DefaultTheme,
@@ -17,5 +20,8 @@ export default {
     app.component('ColabLink', ColabLink)
     app.component('ProgressBar', ProgressBar)
     app.component('RoadmapHero', RoadmapHero)
+    app.component('ConferenceTimeline', ConferenceTimeline)
+    app.component('ProgressDashboard', ProgressDashboard)
+    app.component('GiscusComments', GiscusComments)
   }
 } satisfies Theme

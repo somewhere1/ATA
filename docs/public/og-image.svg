@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D405B"/>
+      <stop offset="100%" stop-color="#2C2E43"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E07A5F"/>
+      <stop offset="100%" stop-color="#F2CC8F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="580" width="1200" height="50" fill="url(#accent)" opacity="0.3"/>
+  <circle cx="1050" cy="150" r="200" fill="#E07A5F" opacity="0.08"/>
+  <circle cx="150" cy="500" r="150" fill="#81B29A" opacity="0.08"/>
+  <text x="100" y="220" font-family="Georgia, serif" font-size="72" fill="white" font-weight="bold">Aim to Anthropic</text>
+  <text x="100" y="300" font-family="sans-serif" font-size="32" fill="#F2CC8F">From Ordinary Background to</text>
+  <text x="100" y="345" font-family="sans-serif" font-size="32" fill="#F2CC8F">Top AI Safety Researcher</text>
+  <text x="100" y="430" font-family="sans-serif" font-size="22" fill="#aaa">A roadmap &amp; learning resource for researchers</text>
+  <text x="100" y="462" font-family="sans-serif" font-size="22" fill="#aaa">aiming to join Anthropic</text>
+  <text x="100" y="530" font-family="monospace" font-size="18" fill="#E07A5F">📐 Foundations → 🔬 Visibility → 🏆 PhD → 🎯 Anthropic</text>
+</svg>

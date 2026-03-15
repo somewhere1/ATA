@@ -9,8 +9,8 @@ hero:
       text: 开始学习 →
       link: /phase-1/
     - theme: alt
-      text: 查看路线图
-      link: '#roadmap'
+      text: 查看进度
+      link: /dashboard
 features:
   - icon: 📐
     title: '第一阶段：补齐基础'
@@ -28,14 +28,14 @@ features:
     title: 备选路线
     details: '不读博也能进 Anthropic — Research Engineer / 大厂跳槽 / 独立研究者'
     link: /resources/alternative-paths
-  - icon: 📚
-    title: 必读论文清单
-    details: '按阶段和方向整理，从 Transformer 基础到 Mech Interp 前沿'
-    link: /resources/paper-reading-list
-  - icon: 🌍
-    title: 社区与人脉指南
-    details: '关键研究者、论坛社区、冷邮件模板、会议参会指南'
-    link: /resources/community-guide
+  - icon: 📅
+    title: 重要时间线
+    details: '会议截止日期、MATS 申请窗口、博士申请节点，一目了然'
+    link: /timeline
+  - icon: 🌟
+    title: 成功案例
+    details: '不同背景的人如何进入 AI Safety 领域，真实路径参考'
+    link: /success-stories
 ---
 
 <script setup>
@@ -50,6 +50,6 @@ import RoadmapHero from './.vitepress/theme/components/RoadmapHero.vue'
 无论文 · 开源项目 × 1 · QS 1200+ Master · CET-6
 :::
 
-::: info 备选路线
-若开源影响力极大，可跳过博士直接申 Research Engineer；或先入 Google DeepMind / Meta FAIR 积累后跳槽。详见[备选路线](/resources/alternative-paths)。
+::: info 更多资源
+[📚 必读论文清单](/resources/paper-reading-list) · [🌍 社区与人脉指南](/resources/community-guide) · [✍️ 学术写作资源](/resources/writing-templates) · [📰 本周推荐论文](/paper-of-week)
 :::
